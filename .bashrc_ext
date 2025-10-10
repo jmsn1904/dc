@@ -1,2 +1,6 @@
 alias ll='ls -la --color=auto'
 alias vim='nvim'
+
+if [ -n "$PS1" ] && [ -z "$TMUX" ]; then
+    tmux attach-session -t default || tmux new-session -s default
+fi
