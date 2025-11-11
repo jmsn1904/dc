@@ -1,6 +1,10 @@
 alias ll='ls -la --color=auto'
 alias vim='nvim'
+alias cat='bat'
+alias ff='fastfetch'
 
 if [ -n "$PS1" ] && [ -z "$TMUX" ]; then
     tmux attach-session -t default || tmux new-session -s default
 fi
+
+ff
