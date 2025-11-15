@@ -11,11 +11,15 @@ if [ -f /usr/bin/batcat ]; then
     alias cat='batcat'
 fi
 
+if [ -f /usr/bin/fastfetch ]; then
+    alias ff='fastfetch'
+fi
+
 if [ -n "$PS1" ] && [ -z "$TMUX" ]; then
     tmux attach-session -t default || tmux new-session -s default
 fi
 
-if [ -f /usr/bin/fastfetch ]; then
-    alias ff='fastfetch'
-    ff
+if alias ff >/dev/null 2>&1; then 
+    ff  
 fi
+
