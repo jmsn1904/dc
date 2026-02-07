@@ -3,6 +3,10 @@ set -o vi
 alias ll='ls -la --color=auto'
 alias vim='nvim'
 
+if [ -f /usr/bin/btop ]; then
+    alias top='btop'
+fi
+
 if [ -f /usr/bin/bat ]; then
     alias cat='bat'
 fi
